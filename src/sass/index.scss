@@ -1,4 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body{
   color: green;
-  background: blue;
+}
+header {
+  height: 100vh;
+  background: rgb(19, 0, 63);
+}
+.projects {
+  min-height: 100vh;
+  background: rgb(0, 0, 0);
+  &__item {
+    height: 100vh;
+    background: rgb(0, 172, 29);
+    border: 1px solid yellow;
+  }
+}
+footer {
+  min-height: 100vh;
+  background: rgb(0, 32, 173);
 }
