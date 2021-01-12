@@ -10,24 +10,21 @@ module.exports = {
   },
   output:{
     filename: '[name]-[contenthash:6].js',
-    path: path.resolve(__dirname, '../', 'dist')
+    path: path.resolve(__dirname, '../', 'dist'),
+    publicPath: './'
   },
   module: {
     rules: [{
-      test: /\.css$/,
-      use: ['MiniCssExtractPlugin.loader', 'css-loader']
-    },
-    {
-      test: /\.(sass|scss)$/,
-      use: ['MiniCssExtractPlugin.loader', 'css-loader', 'sass-loader']
-    },
-    {
       test: /\.(jpg|jpeg|png|gif|svg)$/,
       loader: 'file-loader',
       options: {
            name: '[name]-[contenthash:6].[ext]',
            outputPath: 'images'
       }
+    },
+    {
+      test: /\.(sass|scss)$/,
+      use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
     }]
   },
   plugins: [
